@@ -1,0 +1,48 @@
+
+
+<div class="row">
+  <div class="medium-10 columns content-focus">
+
+    {{!-- if it's a search --}}
+
+      <form class="search">
+        <input />
+        <button>Search</button>
+        <!-- future advanced search controls -->
+      </form>
+
+      <h4>___ listings found:</h4>
+
+
+    {{!-- if it's a browse --}}
+
+      <div class="breadcrumbs">
+        breadcrumbs w/ category/subcategory
+      </div>
+      <h2>category title</h2>
+
+
+    {{!-- same for both --}}
+
+    <div>
+      single list of classified ads that match the search criteria
+        title
+        link to item
+        price
+        truncated description?
+        // other relevant details?
+    </div>
+
+
+    <div class="pagination">
+    {{#if paginate.previous}}<a href="/feed/{{paginate.previous_query}}">&larr; Previous page</a>{{/if}}
+    {{#if paginate.next}}<a href="/feed/{{paginate.next_query}}">Next page &rarr;</a>{{/if}}
+    </div>
+
+
+  </div>
+  <div class="medium-2 columns sidebar">
+    {{> sidebar}}
+  </div>
+</div>
+
